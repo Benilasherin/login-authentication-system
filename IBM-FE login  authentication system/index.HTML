@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IBM FE Login System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container" id="home-page">
+    <h1>IBM FE Login Authentication System</h1>
+    <button onclick="showLogin()">Login</button>
+    <button onclick="showSignup()">Signup</button>
+  </div>
+
+  <div class="container hidden" id="login-page">
+    <h2>Login</h2>
+    <form id="login-form">
+      <input type="email" id="login-email" placeholder="Email" required><br>
+      <input type="password" id="login-password" placeholder="Password" required><br>
+      <button type="submit">Login</button>
+    </form>
+    <p id="login-error" class="error"></p>
+    <button onclick="showHome()">Back</button>
+  </div>
+
+  <div class="container hidden" id="signup-page">
+    <h2>Signup</h2>
+    <form id="signup-form">
+      <input type="email" id="signup-email" placeholder="Email" required><br>
+      <input type="password" id="signup-password" placeholder="Password" required><br>
+      <button type="submit">Signup</button>
+    </form>
+    <button onclick="showHome()">Back</button>
+  </div>
+
+  <div class="container hidden" id="dashboard-page">
+    <h2>Welcome, <span id="user-email"></span></h2>
+    <button onclick="logout()">Logout</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
